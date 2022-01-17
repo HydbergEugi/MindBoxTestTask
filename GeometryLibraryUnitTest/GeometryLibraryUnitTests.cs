@@ -10,9 +10,9 @@ namespace GeometryLibraryUnitTest
         [TestMethod]
         public void CircleArea_R12_452dot389returned()
         {
-            //Входной радиус
+            //Р’С…РѕРґРЅРѕР№ СЂР°РґРёСѓСЃ
             double R = 12;
-            //Ожидаемая площадь
+            //РћР¶РёРґР°РµРјР°СЏ РїР»РѕС‰Р°РґСЊ
             double expected = 452.389;
 
             Circle circle = new Circle(R);
@@ -25,11 +25,11 @@ namespace GeometryLibraryUnitTest
         [TestMethod]
         public void TriangleArea_3and4and6_5dot333returned()
         {
-            //Три стороны треугольника
+            //РўСЂРё СЃС‚РѕСЂРѕРЅС‹ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°
             double a = 3;
             double b = 4;
             double c = 6;
-            //Ожидаемая площадь 
+            //РћР¶РёРґР°РµРјР°СЏ РїР»РѕС‰Р°РґСЊ 
             double expected = 5.333;
 
             Triangle triangle = new Triangle(a, b, c);
@@ -42,7 +42,7 @@ namespace GeometryLibraryUnitTest
         [TestMethod]
         public void TriangleIsRight_3and4and5_true_returned()
         {
-            //Три стороны треугольника
+            //РўСЂРё СЃС‚РѕСЂРѕРЅС‹ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°
             double a = 3;
             double b = 4;
             double c = 5;
