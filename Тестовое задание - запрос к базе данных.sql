@@ -1,10 +1,10 @@
-/* Итоговый запрос */
+/* РС‚РѕРіРѕРІС‹Р№ Р·Р°РїСЂРѕСЃ*/
 /* /////////////////////////////////////////////////////////////////////////////////////////// */
 
 SELECT P.name as Product, C.name as Category FROM Category C JOIN ProductCategoryPivot PCP ON C.id = PCP.CategoryId RIGHT JOIN Product P ON P.id = PCP.ProductId 
 
 /* /////////////////////////////////////////////////////////////////////////////////////////// */
-/* Ниже представлен код для создания и заполнения тестовой базы данных */
+/* РќРёР¶Рµ РїСЂРµРґСЃС‚Р°РІР»РµРЅ РєРѕРґ РґР»СЏ СЃРѕР·РґР°РЅРёСЏ Рё Р·Р°РїРѕР»РЅРµРЅРёСЏ С‚РµСЃС‚РѕРІРѕР№ Р±Р°Р·С‹ РґР°РЅРЅС‹С… */
 /* /////////////////////////////////////////////////////////////////////////////////////////// */
 
 CREATE DATABASE TESTTASK
@@ -15,18 +15,18 @@ CREATE TABLE Category (id INT PRIMARY KEY, name NVARCHAR(50))
 
 CREATE TABLE ProductCategoryPivot (id INT IDENTITY PRIMARY KEY, ProductId INT FOREIGN KEY REFERENCES Product(id), CategoryId INT FOREIGN KEY REFERENCES Category(id))
 
-INSERT INTO Category (id, name) VALUES (1, 'Бытовая техника')
-INSERT INTO Category (id, name) VALUES (2, 'Цифровая техника')
-INSERT INTO Category (id, name) VALUES (3, 'Аксессуары')
-INSERT INTO Category (id, name) VALUES (4, 'Для детей')
-INSERT INTO Category (id, name) VALUES (5, 'Б/У')
+INSERT INTO Category (id, name) VALUES (1, 'ГЃГ»ГІГ®ГўГ Гї ГІГҐГµГ­ГЁГЄГ ')
+INSERT INTO Category (id, name) VALUES (2, 'Г–ГЁГґГ°Г®ГўГ Гї ГІГҐГµГ­ГЁГЄГ ')
+INSERT INTO Category (id, name) VALUES (3, 'ГЂГЄГ±ГҐГ±Г±ГіГ Г°Г»')
+INSERT INTO Category (id, name) VALUES (4, 'Г„Г«Гї Г¤ГҐГІГҐГ©')
+INSERT INTO Category (id, name) VALUES (5, 'ГЃ/Г“')
 
-INSERT INTO Product (id, name) VALUES (1, 'Телефон Samsung A10')
-INSERT INTO Product (id, name) VALUES (2, 'Игрушечная плита')
-INSERT INTO Product (id, name) VALUES (3, 'Детские умные часы')
-INSERT INTO Product (id, name) VALUES (4, 'Наушники "Радостный пони"')
-INSERT INTO Product (id, name) VALUES (5, 'Подушка пуховая')
-INSERT INTO Product (id, name) VALUES (6, 'Кружка Marvel')
+INSERT INTO Product (id, name) VALUES (1, 'Г’ГҐГ«ГҐГґГ®Г­ Samsung A10')
+INSERT INTO Product (id, name) VALUES (2, 'Г€ГЈГ°ГіГёГҐГ·Г­Г Гї ГЇГ«ГЁГІГ ')
+INSERT INTO Product (id, name) VALUES (3, 'Г„ГҐГІГ±ГЄГЁГҐ ГіГ¬Г­Г»ГҐ Г·Г Г±Г»')
+INSERT INTO Product (id, name) VALUES (4, 'ГЌГ ГіГёГ­ГЁГЄГЁ "ГђГ Г¤Г®Г±ГІГ­Г»Г© ГЇГ®Г­ГЁ"')
+INSERT INTO Product (id, name) VALUES (5, 'ГЏГ®Г¤ГіГёГЄГ  ГЇГіГµГ®ГўГ Гї')
+INSERT INTO Product (id, name) VALUES (6, 'ГЉГ°ГіГ¦ГЄГ  Marvel')
 
 INSERT INTO ProductCategoryPivot (ProductId, CategoryId) VALUES (1, 2)
 INSERT INTO ProductCategoryPivot (ProductId, CategoryId) VALUES (1, 5)
